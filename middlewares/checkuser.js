@@ -7,7 +7,10 @@ const requiredLogin = async (req, res, next) => {
       throw new Error("Secret token not configured in environment variables");
     }
 
+
+
     // Get token from headers or cookies
+    
     const wait=await req.headers.authorization;
     console.log("wait:",wait);
     const token =  wait || req.cookies.authCookie;
